@@ -1,0 +1,11 @@
+from microbit import *
+import music
+
+music = [stuff notes]
+
+while True:
+      light=pin0.readanalogue()
+      if light<=50:
+              music.play(music)
+      else:
+              music.stop

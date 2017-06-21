@@ -1,0 +1,30 @@
+## 8 bit work stuff ##
+
+>>> from suds import client
+>>> from suds.client import Client
+>>> api_url = 'https://sandbox-api.didww.com/api2/index.php?wsdl'
+>>> client = Client(api_url)
+>>> methods = [method for method in client.wsdl.services[0].ports[0].methods]
+>>> print len(methods)
+24
+>>>
+
+## Randomizer on GTS Pokemon ##
+
+class Player(models.Model):
+    username = models.CharField(max_length=45, help_text="The player's name")
+    is_admin = models.BooleanField(default=False, help_text="Determines if the player is an Administrator")
+    is_moderator = models.BooleanField(default=False, help_text="Determines if the player is a Moderator")
+    channel_id = models.CharField(max_length=250, help_text="YouTube Channel ID")
+    health = models.IntegerField(help_text="Player's Current HP", default=50)
+    max_health = models.IntegerField(help_text="Player's Maximum HP", default=50)
+    money = models.IntegerField(help_text="Player's money", default=50)
+    level = models.IntegerField(default=1, help_text="Player's level")
+    experience = models.IntegerField(default=0, help_text="Player's experience")
+    attack = models.IntegerField(default=54, help_text="The player's Attack stat value")
+    defense = models.IntegerField(default=54, help_text="The player's Defense stat value")
+    speed = models.IntegerField(default=40, help_text="The player's Speed stat value")
+    pp = models.IntegerField(default=5, help_text="The player's Current PP")
+    max_pp = models.IntegerField(default=5, help_text="The player's Maximum PP")
+    inventory_json = models.TextField(max_length=1000, default='{}', help_text="JSON containing inventory info")
+    date_created = models.DateTimeField(help_text="Date player was created", auto_now=True)

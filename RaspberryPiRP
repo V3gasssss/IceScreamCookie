@@ -1,4 +1,0 @@
-## basic commands such as nano, ifconfig, echo ##
-## https://www.stewright.me/2016/03/turn-raspberry-pi-3-php-7-powered-web-server/ ##
-## https://raspberrypi.stackexchange.com/questions/4144/writing-img-file-to-sd-card-from-a-mac ##
-## problems faced, couldn't install raspbian image through terminal (no need for win32imager) (used raspbian instead of NOOBS)
